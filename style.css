@@ -1,0 +1,98 @@
+*, html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #FFF;
+	color: #000;
+	font-size: 14px;
+	font-family: "Helvetica", Arial, sans-serif;
+	counter-reset: my-other-counter;
+}
+
+h1{
+	font-size: 34px;
+	line-height: 40px;
+	border-bottom: 1px solid #CCC;
+	margin: 15px 0 25px 0;
+}
+h2{
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 15px;
+}
+h3{
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+.clear{ clear: both; }
+
+dl.menu{
+	counter-reset: my-badass-counter;
+	padding: 10px 0;
+}
+	dl.menu dt{
+		position: relative;
+		height: 30px;
+		line-height: 30px;
+		padding-left: 30px;
+	}
+	dl.menu dt:before{
+		content: counter(my-badass-counter);
+		counter-increment: my-badass-counter;
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-size: 24px;
+	}
+
+.wrap{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+.gototop{
+	position: fixed;
+	right: 40px;
+	top: 40px;
+	z-index: 999;
+	height: 40px;
+	background: #000;
+	display: none;
+	padding: 0 20px;
+	color: #FFF;
+	line-height: 40px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+section{
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #CCC;
+	background: #F5F5F5;
+	padding: 35px 0;
+	position: relative;
+}
+	section .wrap:before{
+		content: counter(my-other-counter);
+		counter-increment: my-other-counter;
+		position: absolute;
+		left: -80px;
+		top: 0;
+		color: #CCC;
+		font-size: 80px;
+	}
+	section img{
+		width: 320px;
+		height: auto;
+		float: left;
+		border: 1px solid #CCC;
+		padding: 3px;
+		margin: 0 15px 15px 0;
+	}
+	section .content{
+	}
